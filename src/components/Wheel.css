@@ -1,0 +1,135 @@
+/* Tall invisible container – same as before */
+.wheel-scroll-container {
+  height: 200vh;
+  pointer-events: none;
+}
+
+/* Fixed wheel – left offset now controlled by inline style */
+.wheel-fixed {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+
+.wheel-item .text-section {
+ position: absolute;
+  left: 320px;     /* move text to the right of the image */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;    /* space for text */
+}
+
+/* .wheel-item .text-section .author {
+  margin-right: 30px;
+} */
+
+.wheel-fixed .wheel-item .text-section h1 {
+  margin-left: 10px !important;   /* space below the title block */
+  left: 1%;
+  /* right: 0%; */
+  /* margin-top: -20px */
+}
+
+
+
+.wheel-item .text-section p {
+  margin-right: 80px !important;   /* space below the title block */
+}
+
+/* Items – base styles, size set inline via JS */
+.wheel-item {
+  border-radius: 20px;
+  overflow: visible;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  cursor: pointer;
+  background: white;
+  will-change: transform, opacity;
+  pointer-events: auto;
+}
+
+.wheel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-label {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Optional: adjust label font size on small screens */
+@media (max-width: 768px) {
+  .item-label {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-label {
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+  /* make card act as layout container */
+  .wheel-item{
+    position: relative;
+    /* display:flex; */
+    /* flex-direction:column; */
+    /* align-items:center; */
+    /* overflow:visible; */
+  }
+
+  .wheel-item .text-section h1 {
+    font-size: 55px;
+    margin-top: 170px;
+    left: -160px !important;   /* space below the title block */
+    /* bottom: 50%; */
+    /* margin-left: 0px !important;   space below the title block */
+  }
+
+  /* PR.01 /07 text */
+  .wheel-item .text-section{
+    position:absolute;
+    right:20px;     /* move to right side of image */
+    top:35%;
+    transform:translateY(-50%);
+    /* text-align:right; */
+    /* z-index:10; */
+  }
+
+  /* .wheel-item .text-section slash {
+    
+  } */
+
+  /* project name */
+  .wheel-item .author{
+    position:absolute;
+    top:100%;        /* place below image */
+    left:-110%;
+    margin-top:160px;
+    margin-right: 200px;
+    padding-right: 600px;
+    font-size:20px;
+    text-align:left;
+  }
+
+}
+
+
+
+

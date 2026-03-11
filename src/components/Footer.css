@@ -1,0 +1,38 @@
+/* You can use 'Courier New' or import a font like 'Space Mono' from Google Fonts */
+.portfolio-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 50px; /* Adjust padding to match your site's margins */
+  background-color: transparent; /* The light grey/off-white from the image */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-left p, 
+.footer-right p {
+  margin-left: 150px;
+  margin-right: 1px;
+  line-height: 1.2;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+   .portfolio-footer {
+    display: none;
+  }
+}

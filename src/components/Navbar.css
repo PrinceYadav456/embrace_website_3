@@ -1,0 +1,93 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;
+  z-index: 100;
+  background: transparent; /* match background */
+  font-size: 12px;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+  align-items: start;
+}
+
+.logo {
+  font-weight: bolder;
+  line-height: 0.8;
+  font-size: 20px;
+}
+
+.contact,
+.services,
+.social,
+.menu {
+  line-height: 1.6;
+}
+
+.menu {
+  text-align: right;
+}
+
+/* ================= MOBILE ================= */
+
+/* ================= MOBILE ================= */
+
+.hamburger{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* mobile dropdown */
+
+.mobile-menu{
+  display:none;
+}
+
+/* MOBILE SCREEN */
+
+@media (max-width:768px){
+
+  .navbar{
+    padding:20px 30px;   /* FIX spacing */
+  }
+
+  .nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;  /* FIX vertical alignment */
+  }
+
+  .contact,
+  .services,
+  .social,
+  .menu{
+    display:none;
+  }
+
+  .logo{
+    font-size:18px;      /* match reference size */
+    line-height:1.1;
+  }
+
+  .hamburger{
+    display:block;
+    font-size:28px;
+    line-height:1;
+    margin-right: 5px;
+  }
+
+  .mobile-menu{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    padding:40px 25px;
+    font-size:14px;
+    background:inherit;
+  }
+
+}
