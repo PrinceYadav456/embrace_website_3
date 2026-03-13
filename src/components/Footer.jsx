@@ -5,13 +5,13 @@ const Footer = ({ color }) => {
   return (
     <footer className="portfolio-footer" style={{ color }}>
       <div className="footer-left">
-        <p>© DESIGN</p>
-        <p>EMBRACED LTD</p>
+        {/* <p>© ZIGGURATSS</p>
+        <p>ARTWORK</p> */}
       </div>
 
       <div className="footer-right">
-        <p>C-NR. 07186749</p>
-        <p>DEV. PEROZZI</p>
+        {/* <p>C-NR. 07186749</p>
+        <p>DEV. PEROZZI</p> */}
       </div>
     </footer>
   );

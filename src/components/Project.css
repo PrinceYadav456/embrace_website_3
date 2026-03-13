@@ -169,6 +169,12 @@
     margin-top: 0px;
   }
 
+  .project-left .project-title .slash {
+    font-size: 50px;
+    font-weight: 700;
+    /* margin-left: 20px; */
+  }
+
   .project-name {
     margin-top: 30px;
     padding-right: 150px;

@@ -15,10 +15,12 @@
   align-items: start;
 }
 
-.logo {
-  font-weight: bolder;
+.logo img {
+  /* font-weight: bolder;
   line-height: 0.8;
-  font-size: 20px;
+  font-size: 20px; */
+  height: 45px;
+  width: 50px;
 }
 
 .contact,

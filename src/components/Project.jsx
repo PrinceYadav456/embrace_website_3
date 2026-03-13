@@ -5,7 +5,7 @@ import { projects } from "../data/projects";
 import "./Project.css";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { h4 } from "framer-motion/client";
+//import { h4 } from "framer-motion/client";
 
 
 const Project = () => {

@@ -64,7 +64,7 @@ const Wheel = ({ projects }) => {
     if (width < 480) return 270;
     if (width < 768) return 220;
     if (width < 1024) return 320;
-    return 400;
+    return 350;
   };
 
   const getResponsiveLeftOffset = () => {

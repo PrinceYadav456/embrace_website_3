@@ -95,9 +95,9 @@
   }
 
   .wheel-item .text-section h1 {
-    font-size: 55px;
+    font-size: 50px;
     margin-top: 170px;
-    left: -160px !important;   /* space below the title block */
+    left: -170px !important;   /* space below the title block */
     /* bottom: 50%; */
     /* margin-left: 0px !important;   space below the title block */
   }
@@ -112,9 +112,9 @@
     /* z-index:10; */
   }
 
-  /* .wheel-item .text-section slash {
-    
-  } */
+ .wheel-item .text-section h1 .slash {
+    font-size: 45px !important;
+  }
 
   /* project name */
   .wheel-item .author{
@@ -122,6 +122,7 @@
     top:100%;        /* place below image */
     left:-110%;
     margin-top:160px;
+    /* padding-top: 300px; */
     margin-right: 200px;
     padding-right: 600px;
     font-size:20px;
