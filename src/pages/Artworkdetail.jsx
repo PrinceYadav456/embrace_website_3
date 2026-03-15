@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 /* eslint-disable-next-line no-unused-vars */
 import { motion, useScroll, useTransform } from "framer-motion";
 import { projects } from "../data/projects";
-import "./ArtworkDetail.css";
+import "./Artworkdetail.css";
 
 const fmt = (p) => "₹ " + Number(p).toLocaleString("en-IN") + "/-";
 
