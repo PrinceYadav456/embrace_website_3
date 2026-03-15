@@ -7,6 +7,7 @@ import Mainbody from "./components/Mainbody";
 import Project from "./components/Project";
 import { projects } from "./data/projects";
 import Wheel from "./components/Wheel";
+import ArtworkDetail from "./pages/Artworkdetail"; // adjust path
 
 // import Wheel from "./components/Wheel";   // added
 
@@ -30,7 +31,9 @@ function Layout() {
 
   return (
     <div style={{ color: textColor }}>
-      <Navbar color={textColor} />
+       {/* show navbar only on home page */}
+      {location.pathname === "/" && <Navbar />}
+      {/* <Navbar color={textColor} /> */}
       <ScrollToTop />
       <Routes>
         <Route
@@ -41,8 +44,9 @@ function Layout() {
             </>
           }
         />
-
+        
         <Route path="/project/:id" element={<Project />} />
+        <Route path="/project/:id/artwork/:index" element={<ArtworkDetail />} />
       </Routes>
 
       <Footer color={textColor} />

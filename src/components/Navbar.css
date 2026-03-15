@@ -1,86 +1,94 @@
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 60px;
-  z-index: 100;
-  background: transparent; /* match background */
-  font-size: 12px;
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:18px 60px;
+  background:#f7f7f7;
+  z-index:1000;
 }
 
-.nav-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
-  align-items: start;
+/* container */
+
+.nav-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-.logo img {
-  /* font-weight: bolder;
-  line-height: 0.8;
-  font-size: 20px; */
-  height: 45px;
-  width: 50px;
+/* logo */
+
+.logo img{
+  height:35px;
+  width:auto;
 }
 
-.contact,
-.services,
-.social,
-.menu {
-  line-height: 1.6;
+/* menu links */
+
+.nav-links{
+  display:flex;
+  gap:40px;
+  align-items:center;
+  font-size:15px;
 }
 
-.menu {
-  text-align: right;
+.nav-links a{
+  text-decoration:none;
+  color:#555;
+  font-weight:500;
+  transition:0.3s;
 }
 
-/* ================= MOBILE ================= */
+.nav-links a:hover{
+  color:#caa233;
+}
 
-/* ================= MOBILE ================= */
+/* icons */
 
-.hamburger{
-  display:none;
-  font-size:26px;
+.nav-icons{
+  display:flex;
+  gap:25px;
+  font-size:18px;
+  color:#777;
   cursor:pointer;
 }
 
-/* mobile dropdown */
+.nav-icons span:hover{
+  color:#caa233;
+}
+
+/* hamburger */
+
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* mobile menu */
 
 .mobile-menu{
   display:none;
 }
 
-/* MOBILE SCREEN */
+/* ================= MOBILE ================= */
 
 @media (max-width:768px){
 
   .navbar{
-    padding:20px 30px;   /* FIX spacing */
+    padding:20px 30px;
   }
 
-  .nav-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;  /* FIX vertical alignment */
-  }
-
-  .contact,
-  .services,
-  .social,
-  .menu{
+  .nav-links{
     display:none;
   }
 
-  .logo{
-    font-size:18px;      /* match reference size */
-    line-height:1.1;
+  .nav-icons{
+    display:none;
   }
 
   .hamburger{
     display:block;
-    font-size:28px;
-    line-height:1;
-    margin-right: 5px;
   }
 
   .mobile-menu{
@@ -88,8 +96,18 @@
     flex-direction:column;
     gap:25px;
     padding:40px 25px;
-    font-size:14px;
-    background:inherit;
+    font-size:16px;
+    background:#f7f7f7;
   }
+
+  .mobile-menu a{
+    text-decoration:none;
+    color:#444;
+  }
+
+  .logo img{
+  height:34px;
+ 
+}
 
 }

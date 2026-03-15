@@ -1,75 +1,57 @@
 import "./Navbar.css";
-import React, { useState } from "react";   // ✅ ADDED
+import React, { useState } from "react";
 
 const Navbar = ({ color }) => {
-
-  const [open, setOpen] = useState(false);   // ✅ ADDED
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="navbar" style={{ color }}>
+
       <div className="nav-container">
 
+        {/* Logo */}
         <div className="logo">
           <img src="/zig-logo.png" alt="logo" />
         </div>
 
-        {/* ✅ HAMBURGER (mobile only) */}
+        {/* Desktop Menu */}
+        <div className="nav-links">
+          <a href="/">Home</a>
+          <a href="/">Artwork ▾</a>
+          <a href="/">Artist ▾</a>
+          <a href="/">About</a>
+          <a href="/">Blog</a>
+          <a href="/">Contest</a>
+          <a href="/">Contact</a>
+        </div>
+
+        {/* Right Icons */}
+        <div className="nav-icons">
+          <span>🔍</span>
+          <span>👤</span>
+          <span>🛒</span>
+        </div>
+
+        {/* Hamburger (Mobile) */}
         <div className="hamburger" onClick={() => setOpen(!open)}>
           ☰
         </div>
 
-        <div className="contact">
-          {/* <p>AVAILABLE FOR FREELANCE</p>
-          <p>DESIGNEMBRACED@GMAIL.COM</p>
-          <p>+44 07749737297</p> */}
-        </div>
-
-        <div className="services">
-          {/* <p>WEB DESIGN UI UX</p>
-          <p>BRANDING / TYPEFACE DESIGN</p>
-          <p>MOTION DESIGN</p> */}
-        </div>
-
-        <div className="social">
-          {/* <p>SOCIAL:</p>
-          <p>TW DR LI</p> */}
-        </div>
-
-        <div className="menu">
-          {/* <p>→ WRK</p>
-          <p>ABT</p> */}
-        </div>
-
       </div>
 
-      {/* ✅ MOBILE DROPDOWN MENU */}
+      {/* Mobile Menu */}
       {open && (
         <div className="mobile-menu">
-
-          <div className="contact">
-            <p>AVAILABLE FOR FREELANCE</p>
-            <p>DESIGNEMBRACED@GMAIL.COM</p>
-            <p>+44 07749737297</p>
-          </div>
-
-          <div className="services">
-            <p>WEB DESIGN UI UX</p>
-            <p>BRANDING / TYPEFACE DESIGN</p>
-            <p>MOTION DESIGN</p>
-          </div>
-
-          <div className="social">
-            <p>SOCIAL:</p>
-            <p>TW DR LI</p>
-          </div>
-
-          <div className="menu">
-            <p>→ WRK</p>
-            <p>ABT</p>
-          </div>
-
+          <a href="/">Home</a>
+          <a href="/">Artwork</a>
+          <a href="/">Artist</a>
+          <a href="/">About</a>
+          <a href="/">Blog</a>
+          <a href="/">Contest</a>
+          <a href="/">Contact</a>
         </div>
       )}
+
     </nav>
   );
 };
