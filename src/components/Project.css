@@ -82,7 +82,7 @@
   animation: pjTick 20s linear infinite;
 }
 @keyframes pjTick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.pj-ticker-item { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; padding: 0 16px; }
+.pj-ticker-item { font-size: 16px; letter-spacing: 4px; text-transform: uppercase; padding: 0 16px; }
 .pj-ticker-sep { padding: 0 4px; }
 
 /* ══════════════════════════════════════════════════
