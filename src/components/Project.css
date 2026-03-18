@@ -43,6 +43,7 @@
 
 .pj-banner-overlay { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
 
+/* Top nav with logo and index link */
 .pj-topnav {
   position: absolute; top: 0; left: 0; right: 0; z-index: 20;
   display: flex; justify-content: space-between; align-items: center;
