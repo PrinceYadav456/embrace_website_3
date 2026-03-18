@@ -84,7 +84,7 @@
   animation: pjTick 20s linear infinite;
 }
 @keyframes pjTick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.pj-ticker-item { font-size: 18px; letter-spacing: 4px; text-transform: uppercase; padding: 0 16px; }
+.pj-ticker-item { font-size: 16px; letter-spacing: 4px; text-transform: uppercase; padding: 0 16px; }
 .pj-ticker-sep { padding: 0 4px; }
 
 /* ══════════════════════════════════════════════════
@@ -158,6 +158,8 @@
 .pj-about-block {
   margin-top: 20px; text-align: center; max-width: 640px; padding: 0 16px;
 }
+
+/* About section typography */
 .pj-about-label {
   display: block; font-size: 18px; letter-spacing: 3.5px; text-transform: uppercase;
   margin-bottom: 12px;

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 /* eslint-disable-next-line no-unused-vars */
 import { motion, useScroll, useTransform } from "framer-motion";
 import { projects } from "../data/projects";
-import "./Artworkdetail.css";
+import "./ArtworkDetail.css";
 
 const fmt = (p) => "₹ " + Number(p).toLocaleString("en-IN") + "/-";
 
@@ -199,6 +199,22 @@ const ArtworkDetail = () => {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
             {String(imgIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
           </motion.div>
+        </div>
+
+        {/* ── MOBILE BUYING PANEL — shown only on mobile, below hero ── */}
+        <div className="ad-mobile-panel">
+          <span className="ad-eyebrow">Original Artwork</span>
+          <h1 className="ad-title">{name}</h1>
+          <p className="ad-artist-line">
+            by <strong>{project.name}</strong>
+            {project.location && <span> · {project.location}</span>}
+          </p>
+          <div className="ad-divider" />
+          <div className="ad-price">{fmt(price)}</div>
+          <div className="ad-cta-group">
+            <button className="ad-btn-outline">Make an Offer</button>
+            <button className="ad-btn-solid">Buy This Artwork</button>
+          </div>
         </div>
 
         {/* Detail sections */}

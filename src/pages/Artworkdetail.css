@@ -121,7 +121,7 @@
 @media (max-width: 560px) { .ad-details-grid { grid-template-columns: 1fr; } }
 
 .ad-details-grid div span {
-  display: block; font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+  display: block; font-size: 14px; letter-spacing: 3px; text-transform: uppercase;
   color: rgba(0,0,0,0.30); margin-bottom: 5px;
 }
 .ad-details-grid div p { font-size: 16px; color: #1a1208; }
@@ -140,30 +140,30 @@
   display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px;
 }
 .ad-artist-avatar img {
-  width: 120px; height: 120px; border-radius: 50%;
+  width: 130px; height: 130px; border-radius: 50%;
   object-fit: cover; border: 3px solid rgba(0,0,0,0.07); margin-bottom: 8px;
 }
 .ad-artist-avatar strong { font-size: 16px; color: #1a1208; }
-.ad-artist-avatar span  { font-size: 12px; color: rgba(0,0,0,0.40); letter-spacing: 1px; }
+.ad-artist-avatar span  { font-size: 13px; color: rgba(0,0,0,0.40); letter-spacing: 1px; }
 .ad-artist-avatar em    {
-  font-size: 13px; color: #B8860B; letter-spacing: 2px;
+  font-size: 12px; color: #B8860B; letter-spacing: 2px;
   text-transform: uppercase; font-style: normal;
 }
 
 .ad-artist-bio {
   font-family: 'Playfair Display', serif; font-style: italic;
-  font-size: 16px; line-height: 1.9; color: rgba(0,0,0,0.55);
+  font-size: 17px; line-height: 1.9; color: rgba(0,0,0,0.55);
 }
 
 .ad-shipping-info { display: flex; flex-direction: column; gap: 16px; }
-.ad-shipping-info p { font-size: 16px; line-height: 1.75; color: rgba(0,0,0,0.58); }
+.ad-shipping-info p { font-size: 18px; line-height: 1.75; color: rgba(0,0,0,0.58); }
 .ad-shipping-info strong { color: #1a1208; }
 
 /* ══════════════════════════════════════════════
    PANEL CONTENT STYLES
    ══════════════════════════════════════════════ */
 .ad-eyebrow {
-  font-size: 15px; letter-spacing: 5px; text-transform: uppercase;
+  font-size: 14px; letter-spacing: 5px; text-transform: uppercase;
   color: #B8860B; margin-bottom: 14px; display: block;
 }
 .ad-title {
@@ -185,7 +185,7 @@
   display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;
 }
 .ad-specs p {
-  font-size: 14px; color: rgba(0,0,0,0.55);
+  font-size: 16px; color: rgba(0,0,0,0.55);
   display: flex; gap: 8px; line-height: 1.4;
 }
 .ad-specs p span {
@@ -207,14 +207,14 @@
 .ad-btn-outline {
   padding: 15px; background: transparent;
   border: 1.5px solid #1a1208; color: #1a1208;
-  font-family: 'Space Mono', monospace; font-size: 10px;
+  font-family: 'Space Mono', monospace; font-size: 12px;
   letter-spacing: 3px; text-transform: uppercase;
   cursor: pointer; transition: background 0.25s, color 0.25s;
 }
 .ad-btn-outline:hover { background: #1a1208; color: #fff; }
 .ad-btn-solid {
   padding: 16px; background: #B8860B; border: none; color: #fff;
-  font-family: 'Space Mono', monospace; font-size: 10px;
+  font-family: 'Space Mono', monospace; font-size: 12px;
   letter-spacing: 3px; text-transform: uppercase;
   cursor: pointer; transition: background 0.25s;
 }
@@ -227,6 +227,32 @@
 .ad-trust-inline li { font-size: 16px; letter-spacing: 0.5px; color: #B8860B; }
 
 /* ══════════════════════════════════════════════
+   MOBILE BUYING PANEL
+   Hidden on desktop, shown below hero on mobile
+   ══════════════════════════════════════════════ */
+.ad-mobile-panel {
+  display: none; /* hidden on desktop */
+}
+
+@media (max-width: 768px) {
+  .ad-mobile-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 24px 40px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+
+  /* Tighten up spacing inside mobile panel */
+  .ad-mobile-panel .ad-eyebrow  { margin-bottom: 10px; }
+  .ad-mobile-panel .ad-title    { font-size: clamp(24px, 7vw, 34px); margin-bottom: 8px; }
+  .ad-mobile-panel .ad-artist-line { margin-bottom: 16px; }
+  .ad-mobile-panel .ad-divider  { margin-bottom: 16px; }
+  .ad-mobile-panel .ad-price    { font-size: clamp(28px, 8vw, 36px); margin-bottom: 24px; }
+  .ad-mobile-panel .ad-cta-group { margin-bottom: 0; }
+}
+
+/* ══════════════════════════════════════════════
    COLLECTION MARQUEE
    ══════════════════════════════════════════════ */
 .ad-more-section {
@@ -237,7 +263,7 @@
   text-align: center; margin-bottom: 48px; padding: 0 24px;
 }
 .ad-more-eyebrow {
-  display: block; font-size: 18px; letter-spacing: 5px;
+  display: block; font-size: 9px; letter-spacing: 5px;
   text-transform: uppercase; color: #B8860B; margin-bottom: 10px;
 }
 .ad-more-title {
@@ -304,7 +330,7 @@
 }
 
 .ad-trust-icon-wrap {
-  width: 60px; height: 60px; border-radius: 50%;
+  width: 70px; height: 70px; border-radius: 50%;
   background: #FDF8EE; border: 1.5px solid rgba(184,134,11,0.18);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 6px; transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -321,5 +347,5 @@
 }
 .ad-trust-card span {
   font-family: 'Playfair Display', serif; font-style: italic;
-  font-size: 16px; color: rgba(0,0,0,0.44); line-height: 1.4;
+  font-size: 15px; color: rgba(0,0,0,0.44); line-height: 1.4;
 }
